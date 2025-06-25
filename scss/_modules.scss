@@ -1,0 +1,86 @@
+@use 'variable'as *;
+@use 'mixin'as *;
+
+.section-head{
+    margin-bottom: 96px;
+    &__ja{
+        margin-bottom: 16px;
+        font-size: 24px;
+        font-weight: 600;
+
+        // @media screen and (max-width:787px){
+        //     font-size: 14px;
+        // }
+        @include mq(sp){
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+    }
+
+    &--brown{
+        color: $mainColor2;
+    }
+
+    &--white{
+        color: $textColor2;
+    }
+}
+
+.nav{
+    &-menu{
+        display: flex;
+        align-items: center;
+        column-gap: 32px;
+    }
+}
+
+.fa-instagram{
+    font-size: 24px;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4px;
+    width: 212px;
+    height: 48px;
+    border-radius: 4px;
+    font-family: $sans;
+
+    .fa-envelope{
+        margin-top: 2px;
+        font-size: 16px;
+    }
+
+    &--fill{
+        background-color:$mainColor1;
+        color: $textColor2;
+    }
+
+    &--stroke{
+        border: 2px solid $mainColor1;
+        color: $mainColor1;
+    }
+}
+
+.social-icons{
+    display: flex;
+    column-gap: 16px;
+
+    .social-link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: $accentColor1;
+
+        &__icon{
+            color: $textColor2;
+            font-size: 24px;
+        }
+    }
+}
